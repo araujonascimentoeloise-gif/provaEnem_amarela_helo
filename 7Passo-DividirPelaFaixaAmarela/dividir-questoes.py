@@ -46,7 +46,7 @@ def encontrar_faixa_amarela(imagem, cor_alvo=(255, 252, 191), tolerancia=30, alt
 
         if faixa_encontrada:
 
-            posicao_corte = y - 42
+            posicao_corte = y - 33
 
             if posicao_corte < 0:
                 posicao_corte = 0
@@ -119,26 +119,30 @@ def dividir_imagem_por_faixas(caminho_imagem, pasta_saida, cor_alvo=(255, 252, 1
 
         print(f"Salvo: {nome_arquivo}")
 
-
 if __name__ == "__main__":
+    # Configurações
+    caminho_imagem = "./inteiras/pagina_enem_25.png"
+    pasta_saida = "159_160"
 
-    # ============================
-    # ESCOLHA APENAS UMA IMAGEM
-    # ============================
-
-    caminho_imagem = "colunas_concatenadas_verticalmente.png"
-    # caminho_imagem = "./inteiras/pagina_enem_15.png"
-    # caminho_imagem = "./inteiras/pagina_enem_28.png"
-
-    pasta_saida = "questoes_colunas"
-    # pasta_saida = "pagina_15"
-    # pasta_saida = "pagina_28"
-
-    # Cor da faixa amarela (#FFFCBF)
+    # Cor da faixa amarela
     cor_amarela = (255, 252, 191)
-
     print(f"Cor utilizada: RGB{cor_amarela}")
 
     dividir_imagem_por_faixas(caminho_imagem, pasta_saida, cor_amarela)
 
     print("Divisão concluída!")
+#if __name__ == "__main__":
+
+    # ============================
+    # ESCOLHA APENAS UMA IMAGEM
+    # ============================
+
+    #caminho_imagem = "colunas_concatenadas_verticalmente.png"
+     #caminho_imagem = "./inteiras/pagina_enem_15.png"
+    # caminho_imagem = "./inteiras/pagina_enem_28.png"
+
+    #pasta_saida = "questoes_colunas"
+    # pasta_saida = "pagina_15"
+    # pasta_saida = "pagina_28"
+
+    
